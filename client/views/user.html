@@ -1,0 +1,9 @@
+<span>
+  <a ng-href="{{userdata.url}}" class="caption-sec">{{userdata.userName}}</a>
+  (
+  <a ng-href="{{userdata.url}}">{{userdata.rating}}</a>
+  <a ng-href="{{userdata.url}}">
+    <span class="glyphicon glyphicon-star" ng-repeat="star in stars(userdata.rating) track by $index"></span>
+  </a>
+  )
+</span>

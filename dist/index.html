@@ -1,0 +1,307 @@
+<html ng-app="alexlapa">
+<head>
+  <title>Whom Kiwis want to hire - Alex Lapa</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Online interactive Résumé / CV which is essentialkly a rip-off of TradeMe product page">
+  <meta property="og:description" content="Online interactive Résumé / CV which is essentialkly a rip-off of TradeMe product page">
+  <meta name="keywords" content="CV,Interactive Résumé">
+  <meta name="author" content="Hege Refsnes">
+  <link rel="canonical" href="http://alex.kiwi">
+  <meta property="og:title" content="Whom Kiwis want to hire - Alex Lapa" />
+  <meta property="og:site_name" content="Whom Kiwis want to hire - Alex Lapa"/>
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="http://alex.kiwi" />
+  <meta property="og:image" content="http://alex.kiwi/favicon/favicon-196x196.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="196" />
+  <meta property="og:image:height" content="196" />
+  <meta property="profile:first_name" content="Alex" />
+  <meta property="profile:last_name" content="Lapa" />
+  <meta property="og:image:height" content="196" />
+  <meta property="og:image:height" content="196" />
+  <meta property="og:locale" content="en_NZ" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <meta name="ROBOTS" content="INDEX, FOLLOW">
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png">
+  <style>body{display:none}</style>
+</head>
+<body ng-controller="main" ng-cloak>
+  <!--<div id="overlay-blocker">-->
+  <!--<h1>Website currently is not mobile friendly. Please view on a bigger screen.</h1>-->
+  <!--</div>-->
+  <div id="site" class="container-fluid">
+    <nav id="multisite-nav" class="row hidden-xs">
+      <ul class="nav nav-tabs col-md-offset-2">
+        <li class="active "><a >Alex Lapa</a></li>
+        <li><a ng-click="openModal('No way','You\'ve already found me, who else do you need?')">Find Someone</a></li>
+        <li><a ng-click="openModal('No','I don\'t provide those services')">Holiday Houses</a></li>
+        <li><a ng-click="openModal('Wait','You\'re not going anywhere until you hire me.')">Travelbug</a></li>
+        <li><a ng-click="openModal('Relax','You don\'t need to worry about it with me.')">LifeDirect</a></li>
+        <li><a ng-click="openModal('Nah','I think that\'s enough for you.')">More <b class="caret"></b></a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <nav id="site-nav" class="row">
+      <div id="logo" class="col-md-4 col-md-offset-0 col-xs-7 col-xs-offset-3" ng-click="contactForm()">
+        <img src="images/logo.gif" alt="">
+      </div>
+      <ul class="nav nav-pills col-md-offset-0 col-md-8 col-lg-offset-2 col-lg-6 hidden-xs">
+        <li class="dropdown ">
+          <a  class="dropdown-toggle" data-toggle="dropdown">Browse <b class="caret"></b></a>
+          <ul id="browse-menu" class="dropdown-menu menu">
+            <li><a ng-click="openModal('Brrr', 'Yeah, you go being a shopaholic somewhere else')">View Category Directory <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+            <li class="divider"></li>
+            <li>
+              <div class="row" >
+                <ul class="col-lg-4">
+                  <li><a ng-click="openModal('*Sighs*', 'Boooriiiing...')">Antiques & Collectables</a></li>
+                  <li><a ng-click="openModal('Wow!', 'So you\'re interested in art? Too bad...')">Art</a></li>
+                  <li><a ng-click="openModal('What?', 'You look so young for it, I swear...')">Baby Gear</a></li>
+                  <li><a ng-click="openModal('Ha!', 'Nerd alert!')">Books</a></li>
+                  <li><a ng-click="openModal('Oh my...', 'You still didn\'t realise you not gonna buy anything here?')">Building & Renovation</a></li>
+                  <li><a ng-click="openModal('Meh.', 'I think you\'re to serious for me.')">Business & Industry</a></li>
+                  <li><a ng-click="openModal('What?', 'And also spaceships.')">Cars, Bikes & Boats</a></li>
+                  <li><a ng-click="openModal('Désolé', 'Je ne pourrais point vous être de service.')">Clothing & Fashion</a></li>
+                  <li><a ng-click="openModal('Liar!', 'How do you browse my site if you don\'t have one already?')">Computers</a></li>
+                  <li><a>Crafts</a></li>
+                  <li><a ng-click="openModal('Not mainstream?', 'That\'s for hipsters.')">Electronics & Photography</a></li>
+                </ul>
+                <ul class="col-lg-4">
+                  <li><a ng-click="openModal('Really?', 'Farming? didn\'t see this one coming.')">Farming</a></li>
+                  <li><a ng-click="openModal('No', 'I am not going to live with you, I am sorry.')">Flatmates Wanted</a></li>
+                  <li><a ng-click="openModal('Heh.', 'I wish I had games here.')">Gaming</a></li>
+                  <li><a ng-click="openModal('Don\'t need that.', 'You\'re already beautiful, you should trust your mom.')">Health & Beauty</a></li>
+                  <li><a ng-click="openModal('Emptiness', 'Nothing here')">Home & Living</a></li>
+                  <li><a ng-click="openModal('Why?', 'I hope it\'s not for me...')">Jewellery & Watches</a></li>
+                  <li><a ng-click="openModal('Oh.', 'I guess you\re visiting a wrong site pal.')">Jobs</a></li>
+                  <li><a ng-click="openModal('Lol.', 'No phone for you buddy.')">Mobile Phones</a></li>
+                  <li><a ng-click="openModal('Not now.', 'No time for movies.')">Movies & TV</a></li>
+                  <li><a ng-click="openModal('Come on.', 'Let\'s be honest, that\'s not your thing.')">Music & Instruments</a></li>
+                  <li><a ng-click="openModal('Aaawwww', 'Is it what you\'re looking for?', 'images/cat.jpg')">Pets & Animals</a></li>
+                </ul>
+                <ul class="col-lg-4">
+                  <li><a ng-click="openModal('You okay?', 'Why are you looking for that here?')">Pottery & Glass</a></li>
+                  <li><a ng-click="openModal('Google it', 'You better use google')">Real Estate</a></li>
+                  <li><a ng-click="openModal('Not here.', 'My services are listed below')">Services</a></li>
+                  <li><a ng-click="openModal('Awkwaaard.', 'You realise I am a programmer, right?')">Sports</a></li>
+                  <li><a ng-click="openModal('Stop!', 'What are you doing here, kid?')">Toys & Models</a></li>
+                  <li><a ng-click="openModal('Later.', 'Let\'s talk about business first')">Travel, Events & Activities</a></li>
+                  <li class="divider"></li>
+                  <li><a ng-click="openModal('Enough!', 'I am not a merchant here')">Stores</a></li>
+                  <li><a ng-click="openModal('How much?', 'No, I don\'t think I can agree with that...')">$1 Reserve</a></li>
+                  <li><a ng-click="openModal('Too late.', 'Everything is already closed, only me left')">Closing Soon</a></li>
+                  <li><a ng-click="openModal('Too hot!', 'You\'ve opened the hottest one already')">Hot Listings</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a  class="dropdown-toggle" data-toggle="dropdown">Sell <b class="caret"></b></a>
+          <ul id="sell-menu" class="dropdown-menu menu">
+            <li><a>List in '<b>Portable buildings</b>'</a></li>
+            <li>Building & renovation > Portable buildings</li>
+            <li class="divider"></li>
+            <li><h4>List a...</h4></li>
+            <li><a ng-click="openModal('Ewwww', 'I don\'t need your worn sleepers, jeez')">General item</a></li>
+            <li><small>Success fees for sold items only.</small></li>
+            <li><a ng-click="openModal('I\'m fine', 'I\'ve got a scooter')">Car, motorbike or boat</a></li>
+            <li><small>$39 - $79 until sold.</small></li>
+            <li><a ng-click="openModal('No, no!', 'I am not ready for a mortgage yet.')">Property</a></li>
+            <li><small>$349 - $399 until sold. Rentals $99 - $149.</small></li>
+            <li><a ng-click="openModal('Yes, yes!', 'Finally you\'ve remembered why you came here.')">Job</a></li>
+            <li><small>$160 for 30 days.</small></li>
+            <li><a ng-click="openModal('Hehe', 'What, decided to move out from your parents?')">Flatmate wanted</a></li>
+            <li><small>$9 until you find them.</small></li>
+            <li><a ng-click="openModal('Not interested', 'I have a girlfriend')">Service</a></li>
+            <li><small>$39 for 90 days.</small></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a  class="dropdown-toggle" data-toggle="dropdown">My Trade <b class="caret"></b></a>
+          <ul id="my-trade-menu" class="dropdown-menu menu">
+            <li><a>View My Trade <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+            <li class="divider"></li>
+            <li>
+              <div class="row" >
+                <ul class="col-lg-6">
+                  <li><h4>Buying</h4></li>
+                  <li><a>Watchlist</a></li>
+                  <li><a>Won</a></li>
+                  <li><a>Lost</a></li>
+                  <li></li>
+                  <li><a>Favourites</a></li>
+                  <li><a>Recently Viewed</a></li>
+                </ul>
+                <ul class="col-lg-6">
+                  <li><h4>Selling</h4></li>
+                  <li><a>Items I'm Selling</a></li>
+                  <li><a>Sold</a></li>
+                  <li><a>Unsold</a></li>
+                  <li><a>My Products</a></li>
+                  <li></li>
+                  <li><a>Sales Summary</a></li>
+                  <li><a>Payment Instructions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a  class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+          <ul class="dropdown-menu menu">
+            <li><a>View Community <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+            <li class="divider"></li>
+            <li><a>Announcements</a></li>
+            <li><a>Message Board</a></li>
+            <li><a>Help</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <nav id="user-nav" class="row hidden-xs" role="navigation">
+      <form id="search-form" class="form-inline col-md-6" role="search">
+        <input id="search-box" type="text" class="form-control" placeholder="Search">
+        <button type="submit" id="search-button" class="btn btn-default">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </form>
+      <ul class="nav nav-pills col-md-6">
+        <li class="dropdown">
+          <a  class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-eye-open"></span>Watchlist <b class="caret"></b></a>
+          <ul class="dropdown-menu menu-form" ng-include="'views/login.html'">
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a  class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-heart"></span>Favourites <b class="caret"></b></a>
+          <ul class="dropdown-menu menu-form" ng-include="'views/login.html'">
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a  class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span>Cart <b class="caret"></b></a>
+          <ul class="dropdown-menu menu-form" ng-include="'views/login.html'">
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="row">
+      <nav id="sidebar" class="col-lg-2 visible-lg">
+        <ul class="arrow-list">
+          <li class="caption"><h4>Buying</h4></li>
+          <li><a >Watchlist</a></li>
+          <li><a >Items I won</a></li>
+          <li><a >Items I lost</a></li>
+          <li><a >My favourites</a></li>
+          <li><a >Recently viewed</a></li>
+          <li class="caption"><h4>Selling</h4></li>
+          <li><a >List an item</a></li>
+          <li><a >Items I'm selling</a></li>
+          <li><a >Sold items</a></li>
+          <li><a >Unsold items</a></li>
+        </ul>
+      </nav>
+      <div id="main-content" class="col-lg-10">
+        <nav class="row">
+          <ol class="breadcrumb">
+            <li ng-repeat="name in listingLocation" ><a >{{name}}</a></li>
+          </ol>
+        </nav>
+        <div class="row">
+          <span id="listing-name">{{listingTitle}}</span>
+          <small class="pull-right">Listing #: {{listingNumber}}</small>
+        </div>
+        <div class="row">
+          <span id="listing-name-add">{{listingAdditionalTitle}}</span>
+        </div>
+
+        <div id="item-details" class="row">
+          <span id="price">Price: over negotiation</span>
+          <span id="close-time" class="left-border">Closes: never</span>
+          <a ng-click="contactForm()" class="btn sec-button pull-right hidden-xs"><span class="glyphicon glyphicon-plus"></span> Watchlist</a>
+        </div>
+        <div id="buy-panel" class="row supa-well">
+          <a ng-click="contactForm()" class="btn btn-default main-button">Make Offer</a>
+          <span class="glyphicon glyphicon-question-sign"></span>
+        </div>
+        <div id="listing-body" class="row" ng-bind-html="listingBody">
+        </div>
+        <div id="share-row" class="row hidden-xs">
+          <a ng-click="contactForm()" class="btn sec-button button-big"><span class="glyphicon glyphicon-plus"></span>Add to Watchlist</a>
+          <span class="pull-right addthis_sharing_toolbox">
+          </span>
+        </div>
+        <div id="share-row-xs" class="row text-center visible-xs addthis_sharing_toolbox">
+        </div>
+        <div class="row supa-well">
+          <div id="payment" class="col-sm-5 col-xs-12">
+            <div ng-repeat="detail in details">
+              <h4 class="caption">{{detail.header}}</h4>
+              <ul class="arrow-list">
+                <li class="show-bullet" ng-repeat="item in detail.items">{{item}}</li>
+              </ul>
+            </div>
+          </div>
+          <div id="about-store" class="col-sm-offset-1 col-sm-4 col-xs-offset-0 col-xs-12 left-border">
+            <h4 class="caption">About the store</h4>
+            <ul class="arrow-list">
+              <li id="shop-name">
+                <user ng-model='storeDetails.user'></user>
+              </li>
+              <li class="show-bullet">{{storeDetails.feedback}}% positive feedback</li>
+              <li class="show-bullet">On market since {{storeDetails.startDate | date:'MMM yyyy'}}</li>
+              <li class="show-bullet"><a target="_blank" ng-href="http://www.linkedin.com/in/00010">Linkedin profile</a></li>
+              <li class="show-bullet"><a target="_blank" ng-href="https://dl.dropboxusercontent.com/u/17056327/cv.pdf">Résumé</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div id="buy-bid-box" class="col-sm-offset-4 col-sm-4 col-xs-10 col-xs-offset-1">
+            <h4 class="caption">Make Offer</h4>
+            <p><strong>Want to hire me?</strong></p>
+            <a ng-click="contactForm()" class="btn btn-default buy-button">Make Offer</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <p>Closes: Never</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h4 class="row caption">Questions and answers</h4>
+            <div class="row"><div class="circled-header col-xs-1">Q</div><div class="caption-sec col-xs-11"><a ng-click="contactForm()">Ask the seller a question</a></div></div>
+            <div ng-repeat="item in questions">
+              <div class="row"><div class="circled-question col-xs-1">Q</div><div class="question col-xs-11">{{item.question}}</div></div>
+              <div class="row"><div class="circled-answer col-xs-1">A</div><div class="answer col-xs-11">{{item.answer}}<small class="date">{{item.date | date:'h:mm a, EEE dd MMM'}}</small></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="views row text-center">
+          <p>Page Views</p>
+          <div class="view-counter">
+            <span class="digit" ng-repeat="digit in views.split('') track by $index">{{digit}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.min.js"></script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-539aae825e7eddba"></script>
+</body>
+</html>
