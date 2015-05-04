@@ -69,7 +69,7 @@ function init(angular){
         $analytics.eventTrack('Modal clicked', {  title: title });
 
         $modal.open({
-          templateUrl: '/views/modal.html',
+          templateUrl: 'views/modal.html',
           controller: 'modal',
           resolve: {
             title: function(){return title;},
@@ -83,7 +83,7 @@ function init(angular){
         $analytics.eventTrack('Contact From');
 
         $modal.open({
-          templateUrl: '/views/contact.html',
+          templateUrl: 'views/contact.html',
           controller: 'contactForm',
           resolve: {
             url: function(){

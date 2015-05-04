@@ -5,8 +5,10 @@ require('./styles/fontello.css');
 setTimeout(function(){
   require('./mixpanel');
 }, 0);
-var angular = require('angular');
+window.jQuery = require('jQuery');
 
+var angular = require('angular');
+require('bootstrap');
 require('angular-bootstrap');
 require('angulartics');
 require('angulartics-mixpanel');
