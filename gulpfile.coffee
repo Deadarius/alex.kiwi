@@ -9,6 +9,7 @@ rename =        require 'gulp-rename'
 nodemon =       require 'gulp-nodemon'
 htmlreplace =   require 'gulp-html-replace'
 templateCache = require 'gulp-angular-templatecache'
+gulpif =        require 'gulp-if'
 
 paths =
   indexJs: [ './client/index.js' ]
@@ -18,7 +19,7 @@ paths =
   images: ['./client/images/*.gif', './client/images/*.jpg'],
   favicons: ['./client/favicon/*']
 
-isDev = process.env.NODE_ENV != 'development'
+isDev = process.env.NODE_ENV == 'development'
 
 gulp.task 'clean', (done) ->
   del [
@@ -27,7 +28,7 @@ gulp.task 'clean', (done) ->
   ], done
 
 gulp.task 'browserify', ->
-  browserify debug: true
+  browserify debug: isDev
     .add paths.indexJs
     .bundle()
     .pipe source 'index.js'
@@ -35,14 +36,14 @@ gulp.task 'browserify', ->
 
 gulp.task 'uglify', ->
   gulp.src './dist/index.js'
-    .pipe uglify()
+    .pipe gulpif(!isDev, uglify())
     .pipe rename 'index.min.js'
     .pipe gulp.dest './dist'
 
 gulp.task 'index-html', ->
   gulp.src paths.indexHtml
-    .pipe htmlreplace
-      js: 'index.min.js'
+    .pipe(gulpif(!isDev, htmlreplace(
+      js: 'index.min.js')))
     .pipe gulp.dest './dist'
 
 gulp.task 'html', ->
