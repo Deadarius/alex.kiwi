@@ -28,6 +28,7 @@
     "gulp": "^3.8.11",
     "gulp-angular-templatecache": "^1.6.0",
     "gulp-html-replace": "^1.4.5",
+    "gulp-if": "^1.2.5",
     "gulp-nodemon": "^2.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.2.0",
@@ -47,10 +48,10 @@
     "angular-bootstrap": "./node_modules/angular-bootstrap/dist/ui-bootstrap-tpls.js"
   },
   "browserify-shim": {
-    "jQuery":{
+    "jQuery": {
       "exports": "jQuery"
     },
-    "bootstrap":{
+    "bootstrap": {
       "depends": [
         "jQuery:jQuery"
       ]

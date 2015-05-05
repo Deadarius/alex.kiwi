@@ -15,7 +15,8 @@ paths =
   html: [ './client/views/*.html' ]
   indexHtml: [ './client/index.html' ]
   fonts: ['./client/fonts/*.*', './node_modules/bootstrap/fonts/*.*'],
-  images: ['./client/images/*.gif', './client/images/*.jpg']
+  images: ['./client/images/*.gif', './client/images/*.jpg'],
+  favicons: ['./client/favicon/*']
 
 isDev = process.env.NODE_ENV != 'development'
 
@@ -60,6 +61,10 @@ gulp.task 'images', ->
   gulp.src paths.images
     .pipe gulp.dest './dist/images'
 
+gulp.task 'favicons', ->
+  gulp.src paths.favicons
+    .pipe gulp.dest './dist/favicon'
+
 gulp.task 'build', (callback) ->
   runSequence 'clean',
     'html', [
@@ -67,6 +72,7 @@ gulp.task 'build', (callback) ->
       'index-html'
       'fonts'
       'images'
+      'favicons'
     ], 'uglify', callback
 
 gulp.task 'watch', [ 'build' ], ->

@@ -57,124 +57,125 @@
     </nav>
   </div>
   <div class="container">
-    <nav id="site-nav" class="row">
-      <div id="logo" class="col-md-4 col-md-offset-0 col-xs-7 col-xs-offset-3" ng-click="contactForm()">
-        <img src="images/logo.gif" alt="">
-      </div>
-      <ul class="nav nav-pills col-md-offset-0 col-md-8 col-lg-offset-2 col-lg-6 hidden-xs">
-        <li class="dropdown ">
-          <a  class="dropdown-toggle" data-toggle="dropdown">Browse <b class="caret"></b></a>
-          <ul id="browse-menu" class="dropdown-menu menu">
-            <li><a ng-click="openModal('Brrr', 'Yeah, you go being a shopaholic somewhere else')">View Category Directory <span class="glyphicon glyphicon-arrow-right"></span></a></li>
-            <li class="divider"></li>
-            <li>
-              <div class="row" >
-                <ul class="col-lg-4">
-                  <li><a ng-click="openModal('*Sighs*', 'Boooriiiing...')">Antiques & Collectables</a></li>
-                  <li><a ng-click="openModal('Wow!', 'So you\'re interested in art? Too bad...')">Art</a></li>
-                  <li><a ng-click="openModal('What?', 'You look so young for it, I swear...')">Baby Gear</a></li>
-                  <li><a ng-click="openModal('Ha!', 'Nerd alert!')">Books</a></li>
-                  <li><a ng-click="openModal('Oh my...', 'You still didn\'t realise you not gonna buy anything here?')">Building & Renovation</a></li>
-                  <li><a ng-click="openModal('Meh.', 'I think you\'re to serious for me.')">Business & Industry</a></li>
-                  <li><a ng-click="openModal('What?', 'And also spaceships.')">Cars, Bikes & Boats</a></li>
-                  <li><a ng-click="openModal('Désolé', 'Je ne pourrais point vous être de service.')">Clothing & Fashion</a></li>
-                  <li><a ng-click="openModal('Liar!', 'How do you browse my site if you don\'t have one already?')">Computers</a></li>
-                  <li><a>Crafts</a></li>
-                  <li><a ng-click="openModal('Not mainstream?', 'That\'s for hipsters.')">Electronics & Photography</a></li>
-                </ul>
-                <ul class="col-lg-4">
-                  <li><a ng-click="openModal('Really?', 'Farming? didn\'t see this one coming.')">Farming</a></li>
-                  <li><a ng-click="openModal('No', 'I am not going to live with you, I am sorry.')">Flatmates Wanted</a></li>
-                  <li><a ng-click="openModal('Heh.', 'I wish I had games here.')">Gaming</a></li>
-                  <li><a ng-click="openModal('Don\'t need that.', 'You\'re already beautiful, you should trust your mom.')">Health & Beauty</a></li>
-                  <li><a ng-click="openModal('Emptiness', 'Nothing here')">Home & Living</a></li>
-                  <li><a ng-click="openModal('Why?', 'I hope it\'s not for me...')">Jewellery & Watches</a></li>
-                  <li><a ng-click="openModal('Oh.', 'I guess you\re visiting a wrong site pal.')">Jobs</a></li>
-                  <li><a ng-click="openModal('Lol.', 'No phone for you buddy.')">Mobile Phones</a></li>
-                  <li><a ng-click="openModal('Not now.', 'No time for movies.')">Movies & TV</a></li>
-                  <li><a ng-click="openModal('Come on.', 'Let\'s be honest, that\'s not your thing.')">Music & Instruments</a></li>
-                  <li><a ng-click="openModal('Aaawwww', 'Is it what you\'re looking for?', 'images/cat.jpg')">Pets & Animals</a></li>
-                </ul>
-                <ul class="col-lg-4">
-                  <li><a ng-click="openModal('You okay?', 'Why are you looking for that here?')">Pottery & Glass</a></li>
-                  <li><a ng-click="openModal('Google it', 'You better use google')">Real Estate</a></li>
-                  <li><a ng-click="openModal('Not here.', 'My services are listed below')">Services</a></li>
-                  <li><a ng-click="openModal('Awkwaaard.', 'You realise I am a programmer, right?')">Sports</a></li>
-                  <li><a ng-click="openModal('Stop!', 'What are you doing here, kid?')">Toys & Models</a></li>
-                  <li><a ng-click="openModal('Later.', 'Let\'s talk about business first')">Travel, Events & Activities</a></li>
-                  <li class="divider"></li>
-                  <li><a ng-click="openModal('Enough!', 'I am not a merchant here')">Stores</a></li>
-                  <li><a ng-click="openModal('How much?', 'No, I don\'t think I can agree with that...')">$1 Reserve</a></li>
-                  <li><a ng-click="openModal('Too late.', 'Everything is already closed, only me left')">Closing Soon</a></li>
-                  <li><a ng-click="openModal('Too hot!', 'You\'ve opened the hottest one already')">Hot Listings</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a  class="dropdown-toggle" data-toggle="dropdown">Sell <b class="caret"></b></a>
-          <ul id="sell-menu" class="dropdown-menu menu">
-            <li><a>List in '<b>Portable buildings</b>'</a></li>
-            <li>Building & renovation > Portable buildings</li>
-            <li class="divider"></li>
-            <li><h4>List a...</h4></li>
-            <li><a ng-click="openModal('Ewwww', 'I don\'t need your worn sleepers, jeez')">General item</a></li>
-            <li><small>Success fees for sold items only.</small></li>
-            <li><a ng-click="openModal('I\'m fine', 'I\'ve got a scooter')">Car, motorbike or boat</a></li>
-            <li><small>$39 - $79 until sold.</small></li>
-            <li><a ng-click="openModal('No, no!', 'I am not ready for a mortgage yet.')">Property</a></li>
-            <li><small>$349 - $399 until sold. Rentals $99 - $149.</small></li>
-            <li><a ng-click="openModal('Yes, yes!', 'Finally you\'ve remembered why you came here.')">Job</a></li>
-            <li><small>$160 for 30 days.</small></li>
-            <li><a ng-click="openModal('Hehe', 'What, decided to move out from your parents?')">Flatmate wanted</a></li>
-            <li><small>$9 until you find them.</small></li>
-            <li><a ng-click="openModal('Not interested', 'I have a girlfriend')">Service</a></li>
-            <li><small>$39 for 90 days.</small></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a  class="dropdown-toggle" data-toggle="dropdown">My Trade <b class="caret"></b></a>
-          <ul id="my-trade-menu" class="dropdown-menu menu">
-            <li><a>View My Trade <span class="glyphicon glyphicon-arrow-right"></span></a></li>
-            <li class="divider"></li>
-            <li>
-              <div class="row" >
-                <ul class="col-lg-6">
-                  <li><h4>Buying</h4></li>
-                  <li><a>Watchlist</a></li>
-                  <li><a>Won</a></li>
-                  <li><a>Lost</a></li>
-                  <li></li>
-                  <li><a>Favourites</a></li>
-                  <li><a>Recently Viewed</a></li>
-                </ul>
-                <ul class="col-lg-6">
-                  <li><h4>Selling</h4></li>
-                  <li><a>Items I'm Selling</a></li>
-                  <li><a>Sold</a></li>
-                  <li><a>Unsold</a></li>
-                  <li><a>My Products</a></li>
-                  <li></li>
-                  <li><a>Sales Summary</a></li>
-                  <li><a>Payment Instructions</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a  class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
-          <ul class="dropdown-menu menu">
-            <li><a>View Community <span class="glyphicon glyphicon-arrow-right"></span></a></li>
-            <li class="divider"></li>
-            <li><a>Announcements</a></li>
-            <li><a>Message Board</a></li>
-            <li><a>Help</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+    <div class="col-md-10 col-md-offset-1">
+      <nav id="site-nav" class="row">
+        <div id="logo" class="col-md-4 col-md-offset-0 col-xs-7 col-xs-offset-3" ng-click="contactForm()">
+          <img src="images/logo.gif" alt="">
+        </div>
+        <ul class="nav nav-pills col-md-offset-0 col-md-8 col-lg-offset-2 col-lg-6 hidden-xs">
+          <li class="dropdown ">
+            <a  class="dropdown-toggle" data-toggle="dropdown">Browse <b class="caret"></b></a>
+            <ul id="browse-menu" class="dropdown-menu menu">
+              <li><a ng-click="openModal('Brrr', 'Yeah, you go being a shopaholic somewhere else')">View Category Directory <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+              <li class="divider"></li>
+              <li>
+                <div class="row" >
+                  <ul class="col-lg-4">
+                    <li><a ng-click="openModal('*Sighs*', 'Boooriiiing...')">Antiques & Collectables</a></li>
+                    <li><a ng-click="openModal('Wow!', 'So you\'re interested in art? Too bad...')">Art</a></li>
+                    <li><a ng-click="openModal('What?', 'You look so young for it, I swear...')">Baby Gear</a></li>
+                    <li><a ng-click="openModal('Ha!', 'Nerd alert!')">Books</a></li>
+                    <li><a ng-click="openModal('Oh my...', 'You still didn\'t realise you not gonna buy anything here?')">Building & Renovation</a></li>
+                    <li><a ng-click="openModal('Meh.', 'I think you\'re to serious for me.')">Business & Industry</a></li>
+                    <li><a ng-click="openModal('What?', 'And also spaceships.')">Cars, Bikes & Boats</a></li>
+                    <li><a ng-click="openModal('Désolé', 'Je ne pourrais point vous être de service.')">Clothing & Fashion</a></li>
+                    <li><a ng-click="openModal('Liar!', 'How do you browse my site if you don\'t have one already?')">Computers</a></li>
+                    <li><a>Crafts</a></li>
+                    <li><a ng-click="openModal('Not mainstream?', 'That\'s for hipsters.')">Electronics & Photography</a></li>
+                  </ul>
+                  <ul class="col-lg-4">
+                    <li><a ng-click="openModal('Really?', 'Farming? didn\'t see this one coming.')">Farming</a></li>
+                    <li><a ng-click="openModal('No', 'I am not going to live with you, I am sorry.')">Flatmates Wanted</a></li>
+                    <li><a ng-click="openModal('Heh.', 'I wish I had games here.')">Gaming</a></li>
+                    <li><a ng-click="openModal('Don\'t need that.', 'You\'re already beautiful, you should trust your mom.')">Health & Beauty</a></li>
+                    <li><a ng-click="openModal('Emptiness', 'Nothing here')">Home & Living</a></li>
+                    <li><a ng-click="openModal('Why?', 'I hope it\'s not for me...')">Jewellery & Watches</a></li>
+                    <li><a ng-click="openModal('Oh.', 'I guess you\re visiting a wrong site pal.')">Jobs</a></li>
+                    <li><a ng-click="openModal('Lol.', 'No phone for you buddy.')">Mobile Phones</a></li>
+                    <li><a ng-click="openModal('Not now.', 'No time for movies.')">Movies & TV</a></li>
+                    <li><a ng-click="openModal('Come on.', 'Let\'s be honest, that\'s not your thing.')">Music & Instruments</a></li>
+                    <li><a ng-click="openModal('Aaawwww', 'Is it what you\'re looking for?', 'images/cat.jpg')">Pets & Animals</a></li>
+                  </ul>
+                  <ul class="col-lg-4">
+                    <li><a ng-click="openModal('You okay?', 'Why are you looking for that here?')">Pottery & Glass</a></li>
+                    <li><a ng-click="openModal('Google it', 'You better use google')">Real Estate</a></li>
+                    <li><a ng-click="openModal('Not here.', 'My services are listed below')">Services</a></li>
+                    <li><a ng-click="openModal('Awkwaaard.', 'You realise I am a programmer, right?')">Sports</a></li>
+                    <li><a ng-click="openModal('Stop!', 'What are you doing here, kid?')">Toys & Models</a></li>
+                    <li><a ng-click="openModal('Later.', 'Let\'s talk about business first')">Travel, Events & Activities</a></li>
+                    <li class="divider"></li>
+                    <li><a ng-click="openModal('Enough!', 'I am not a merchant here')">Stores</a></li>
+                    <li><a ng-click="openModal('How much?', 'No, I don\'t think I can agree with that...')">$1 Reserve</a></li>
+                    <li><a ng-click="openModal('Too late.', 'Everything is already closed, only me left')">Closing Soon</a></li>
+                    <li><a ng-click="openModal('Too hot!', 'You\'ve opened the hottest one already')">Hot Listings</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a  class="dropdown-toggle" data-toggle="dropdown">Sell <b class="caret"></b></a>
+            <ul id="sell-menu" class="dropdown-menu menu">
+              <li><a>List in '<b>Portable buildings</b>'</a></li>
+              <li>Building & renovation > Portable buildings</li>
+              <li class="divider"></li>
+              <li><h4>List a...</h4></li>
+              <li><a ng-click="openModal('Ewwww', 'I don\'t need your worn sleepers, jeez')">General item</a></li>
+              <li><small>Success fees for sold items only.</small></li>
+              <li><a ng-click="openModal('I\'m fine', 'I\'ve got a scooter')">Car, motorbike or boat</a></li>
+              <li><small>$39 - $79 until sold.</small></li>
+              <li><a ng-click="openModal('No, no!', 'I am not ready for a mortgage yet.')">Property</a></li>
+              <li><small>$349 - $399 until sold. Rentals $99 - $149.</small></li>
+              <li><a ng-click="openModal('Yes, yes!', 'Finally you\'ve remembered why you came here.')">Job</a></li>
+              <li><small>$160 for 30 days.</small></li>
+              <li><a ng-click="openModal('Hehe', 'What, decided to move out from your parents?')">Flatmate wanted</a></li>
+              <li><small>$9 until you find them.</small></li>
+              <li><a ng-click="openModal('Not interested', 'I have a girlfriend')">Service</a></li>
+              <li><small>$39 for 90 days.</small></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a  class="dropdown-toggle" data-toggle="dropdown">My Trade <b class="caret"></b></a>
+            <ul id="my-trade-menu" class="dropdown-menu menu">
+              <li><a>View My Trade <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+              <li class="divider"></li>
+              <li>
+                <div class="row" >
+                  <ul class="col-lg-6">
+                    <li><h4>Buying</h4></li>
+                    <li><a>Watchlist</a></li>
+                    <li><a>Won</a></li>
+                    <li><a>Lost</a></li>
+                    <li></li>
+                    <li><a>Favourites</a></li>
+                    <li><a>Recently Viewed</a></li>
+                  </ul>
+                  <ul class="col-lg-6">
+                    <li><h4>Selling</h4></li>
+                    <li><a>Items I'm Selling</a></li>
+                    <li><a>Sold</a></li>
+                    <li><a>Unsold</a></li>
+                    <li><a>My Products</a></li>
+                    <li></li>
+                    <li><a>Sales Summary</a></li>
+                    <li><a>Payment Instructions</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a  class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+            <ul class="dropdown-menu menu">
+              <li><a>View Community <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+              <li class="divider"></li>
+              <li><a>Announcements</a></li>
+              <li><a>Message Board</a></li>
+              <li><a>Help</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     <nav id="user-nav" class="row hidden-xs" role="navigation">
       <form id="search-form" class="form-inline col-md-6" role="search">
         <input id="search-box" type="text" class="form-control" placeholder="Search">
@@ -299,6 +300,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
   <!-- build:js -->
