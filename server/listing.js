@@ -16,7 +16,7 @@ router.get('/listing/views', function(req, res, next){
     event: ['Page Viewed'],
     type: 'unique',
     unit: 'month',
-    interval: 12,
+    interval: 60,
   })
   .then(function(data) {
     var views = data.data.values['Page Viewed'];
